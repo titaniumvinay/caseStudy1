@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - TechFlow Consulting</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .navbar {
+        background-color: white !important;
+      }
+
+      .page-header {
+        background: linear-gradient(135deg, #0033cc, #6699ff);
+        color: white;
+        padding: 80px 0;
+        margin-top: 76px;
+      }
+
+      .portfolio-item {
+        border: none;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .portfolio-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .portfolio-img {
+        width: 100%;
+        height: auto;
+        border-bottom: 5px solid #0033cc;
+      }
+
+      .portfolio-category {
+        font-size: 0.9rem;
+        color: #0033cc;
+      }
+
+      .portfolio-description {
+        padding: 15px;
+      }
+
+      .filter-buttons {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .filter-buttons button {
+        margin: 5px;
+        border-radius: 20px;
+      }
+
+      .modal-header {
+        background-color: #0033cc;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">TechFlow</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="page-header">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Our Portfolio</h1>
+        <p class="lead">Explore our recent projects and success stories</p>
+      </div>
+    </header>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="filter-buttons">
+          <button class="btn btn-outline-primary">All</button>
+          <button class="btn btn-outline-primary">Web Development</button>
+          <button class="btn btn-outline-primary">Cloud Solutions</button>
+          <button class="btn btn-outline-primary">Cybersecurity</button>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-item card">
+              <img
+                src="images/img10.png"
+                class="portfolio-img"
+                alt="Project 1"
+              />
+              <div class="portfolio-description">
+                <h5 class="portfolio-title">E-commerce Website</h5>
+                <span class="portfolio-category">Web Development</span>
+                <p>
+                  We developed a fully responsive e-commerce platform for a
+                  retail client.
+                </p>
+                <button
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#portfolioModal1"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+          
+
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-item card">
+              <img
+                src="images/img13.png " 
+                class="portfolio-img"
+                alt="Project 2"
+              />
+              <div class="portfolio-description">
+                <h5 class="portfolio-title">Cloud Migration</h5>
+                <span class="portfolio-category">Cloud Solutions</span>
+                <p>
+                  Successfully migrated client infrastructure to AWS with 99.9%
+                  uptime.
+                </p>
+                <button
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#portfolioModal2"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-item card">
+              <img
+                src="images/img12.png"
+                class="portfolio-img"
+                alt="Project 3"
+              />
+              <div class="portfolio-description">
+                <h5 class="portfolio-title">Security Audits</h5>
+                <span class="portfolio-category">Cybersecurity</span>
+                <p>
+                  Conducted security audits for a financial institution to
+                  prevent data breaches.
+                </p>
+                <button
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#portfolioModal3"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal fade" id="portfolioModal1" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">E-commerce Website</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="images/img15.jpg"
+              class="img-fluid d-block mx-auto mb-3"
+              alt="Project 1"
+            />
+            <p>
+              We developed a robust e-commerce solution that integrated with the
+              client’s inventory system and featured advanced search
+              capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="portfolioModal2" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cloud Migration</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="images/img16.jpg"
+              class="img-fluid d-block mx-auto mb-3"
+              alt="Project 2"
+            />
+            <p>
+              Our team successfully migrated the client's infrastructure to the
+              cloud, significantly improving scalability and reducing costs by
+              25%.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="portfolioModal3" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Security Audits</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="images/img17.png"
+              class="img-fluid d-block mx-auto mb-3"
+              alt="Project 3"
+            />
+            <p>
+              We conducted extensive security audits and implemented
+              multi-layered security protocols to safeguard sensitive client
+              data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <h4>TechFlow</h4>
+            <p>
+              Transforming businesses through innovative technical solutions.
+            </p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/feed/" class="text-white me-3"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://www.x.com" class="text-white me-3"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://www.facebook.com" class="text-white"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <p class="mb-0">
+          &copy; 2024 TechFlow Consulting. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
